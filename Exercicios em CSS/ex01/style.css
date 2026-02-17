@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+body{
+    background-color: rgb(204, 245, 245);
+    font-family: cursive;
+    font-size: 10px;
+}
+
+h1{
+    color: red;
+    background-color: burlywood;
+}
+h2{
+    color: brown;
+}
+
+p{
+    text-align: justify;
+}
