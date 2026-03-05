@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        table{
+            position: relative;
+            border-collapse: collapse;
+            width: 500px;
+        }
+        
+        td, th{
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        thead, tfoot{
+            background-color: gray;
+            color: white;
+        }
+
+        thead > tr > th{
+            position: sticky; /*Faz com que o cabeçalho fique fixo enquanto rola a tabela, e quando acabar a linha da tabela ele vai subir junto com a tabela*/
+            top: -1px; /*Ajusta a posição do cabeçalho para evitar sobreposição com a borda da tabela*/
+            background-color: #383838;
+        }
+
+        td.num{
+            text-align: right;
+        }
+
+        caption{
+            font-weight: bold;
+            padding: 10px;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        /*A SEGUIR MOSTRA UMA PSEUDO-CLASSE QUE ALTERNA A COR DA LINHA DA TABELA,odd numeros impares, even numeros pares*/
+        tbody> tr:nth-child(2n) {
+            background-color: lightgray;
+            
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Uso de Tabelas  Grandes</h1>
+
+
+    <!--ANATOMIA PARA TABELAS GRANDES
+    TABLE
+        CAPTION:LEGENDA DA TABELA=NAO PODE TR NEM TD , APENAS COLOCA O TEXTO
+        THEAD:CABEÇA
+            TR,TD,TH
+        TBODY:CORPO
+            TR,TD,TH
+        TFOOT:FOOTER
+            TR,TD,TH
+
+    -->
+
+    <table>
+        <caption>População das Unidades Federativas</caption>
+        <thead>
+            <tr>
+                <th scope="col">Estado</th> <!--serve para dizer que os conteudos estão embaixo, ou seja, na mesma coluna-->
+                <th scope="col" style="width: 50px;">População</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45.919.049</td>
+            </tr>
+
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">20.592.470</td>
+            </tr>
+
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">13.864.985</td>
+            </tr>
+
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45.919.049</td>
+            </tr>
+
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">20.592.470</td>
+            </tr>
+
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">13.864.985</td>
+            </tr>
+
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45.919.049</td>
+            </tr>
+
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">20.592.470</td>
+            </tr>
+
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">13.864.985</td>
+            </tr>
+
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45.919.049</td>
+            </tr>
+
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">20.592.470</td>
+            </tr>
+
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">13.864.985</td>
+            </tr>
+
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45.919.049</td>
+            </tr>
+
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">20.592.470</td>
+            </tr>
+
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">13.864.985</td>
+            </tr>
+
+
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45.919.049</td>
+            </tr>
+
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">20.592.470</td>
+            </tr>
+
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">13.864.985</td>
+            </tr>
+
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45.919.049</td>
+            </tr>
+
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">20.592.470</td>
+            </tr>
+
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">13.864.985</td>
+            </tr>
+
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45.919.049</td>
+            </tr>
+
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">20.592.470</td>
+            </tr>
+
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">13.864.985</td>
+            </tr>
+
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th scope="row">Total</th> <!--serve para dizer que os conteudos estao , na mesma linha-->
+                <td class="num"><strong>0000</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>
