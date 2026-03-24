@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+</head>
+<body>
+    <form action="cadastro.php" method="get" autocomplete="on">
+
+        <p>
+            <label for="iano">Em que ano voce nasceu?</label>
+            <input type="number" name="ano" id="iano" min="1900" max="2020" oninput="calcIdade()">
+        </p>
+
+        <p>
+            <label for="iidade">Sua idade é:</label>
+            <output id="iidade">0</output>
+
+        </p>
+    </form>
+
+    <script>
+        function calcIdade() {
+            const ano = Number(document.getElementById('iano').value) || 0;
+            const idade = ano ? new Date().getFullYear() - ano : 0;
+            document.getElementById('iidade').textContent = idade;
+        }
+    </script>
+    
+</body>
+</html>
